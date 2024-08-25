@@ -15,6 +15,7 @@
             height: 100%;
             font-family: 'Raleway', sans-serif;
             color: #6D6E71;
+            box-sizing: border-box;
         }
 
         body {
@@ -68,9 +69,10 @@
         }
 
         #presentation {
-            padding: 120px 20px 60px 20px;
+            padding: 80px 20px 60px 20px;
             text-align: center;
             flex: 1;
+            margin-top: 80px; /* espace pour le header fixe */
         }
 
         #presentation h2 {
@@ -133,6 +135,10 @@
                 font-size: 1rem;
                 padding: 0 10px;
             }
+
+            .photos-rucher img {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -171,3 +177,4 @@
 </body>
 
 </html>
+
