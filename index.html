@@ -7,71 +7,92 @@
     <title>Rucher Apicole - Accueil</title>
     <link rel="icon" href="logoabeille.png" type="image/png">
     <style>
-        /* CSS inclus */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #fffbe0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #FAF8F0;
             color: #333;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
         }
 
         header {
-            background-color: #f9c907;
-            padding: 20px;
+            background-color: #D4AF37;
+            padding: 40px;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
             margin: 0;
             color: #333;
+            font-size: 2.5rem;
+            font-weight: 600;
         }
 
         nav ul {
             list-style: none;
             padding: 0;
+            margin-top: 20px;
         }
 
         nav ul li {
             display: inline;
-            margin-right: 20px;
+            margin-right: 30px;
         }
 
         nav ul li a {
             text-decoration: none;
             color: #333;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #6b8e23;
         }
 
         #presentation {
-            padding: 20px;
+            padding: 60px 20px;
             text-align: center;
         }
 
         #presentation h2 {
             color: #6b8e23;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        #presentation p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
         }
 
         .photos-rucher {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 20px;
         }
 
         .photos-rucher img {
-            width: 300px;
-            border-radius: 10px;
+            width: 350px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         footer {
-            background-color: #f9c907;
+            background-color: #333;
+            color: #FAF8F0;
             text-align: center;
-            padding: 10px;
-            margin-top: 20px;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
         }
 
         footer p {
             margin: 0;
-            color: #333;
         }
     </style>
 </head>
@@ -89,7 +110,7 @@
 
     <section id="presentation">
         <h2>Présentation du Rucher</h2>
-        <p>Bienvenue dans notre rucher apicole, où nous produisons du miel naturel de la plus haute qualité avec amour et soin pour nos abeilles.</p>
+        <p>Découvrez notre rucher apicole où nous produisons du miel naturel de la plus haute qualité, tout en respectant l'environnement et en prenant soin de nos abeilles.</p>
         <div class="photos-rucher">
             <img src="rucher1.jpg" alt="Rucher photo 1">
             <img src="rucher2.jpg" alt="Rucher photo 2">
