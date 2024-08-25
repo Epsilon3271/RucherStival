@@ -9,14 +9,18 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Raleway:wght@400;600&display=swap');
 
-        body {
-            font-family: 'Raleway', sans-serif;
-            background-color: #F9F6F0;
-            color: #6D6E71;
+        html, body {
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            overflow-x: hidden;
+            height: 100%;
+            font-family: 'Raleway', sans-serif;
+            color: #6D6E71;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #F9F6F0;
         }
 
         header {
@@ -65,23 +69,20 @@
 
         #details-produit {
             display: flex;
-            padding: 140px 20px 60px 20px;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            gap: 40px;
+            padding: 140px 20px 60px 20px;
+            text-align: center;
+            flex: 1;
         }
 
         #details-produit img {
-            width: 400px;
+            width: 100%;
+            max-width: 400px;
             height: auto;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        #details-produit .description {
-            max-width: 600px;
+            margin-bottom: 20px;
         }
 
         #details-produit h2 {
@@ -94,6 +95,7 @@
         #details-produit p {
             font-size: 1.2rem;
             margin-bottom: 20px;
+            max-width: 700px;
         }
 
         footer {
@@ -101,12 +103,25 @@
             color: #F9F6F0;
             text-align: center;
             padding: 20px;
-            margin-top: 60px;
             font-size: 0.9rem;
         }
 
         footer p {
             margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            #details-produit h2 {
+                font-size: 1.8rem;
+            }
+
+            #details-produit p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -124,7 +139,7 @@
 
     <section id="details-produit">
         <img src="miel.jpg" alt="Pot de miel">
-        <div class="description">
+        <div>
             <h2>Miel de Lavande</h2>
             <p>Prix : 15,00 €</p>
             <p>Description : Ce miel de lavande est produit à partir des fleurs de lavande de nos champs. Il a une saveur douce et florale, idéale pour sucrer vos boissons ou accompagner vos desserts.</p>
