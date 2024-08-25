@@ -69,20 +69,32 @@
 
         #details-produit {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 140px 20px 60px 20px;
-            text-align: center;
+            justify-content: center;
+            padding: 120px 20px 60px 20px;
             flex: 1;
         }
 
-        #details-produit img {
+        .container {
+            display: flex;
+            max-width: 800px;
             width: 100%;
-            max-width: 400px;
+            gap: 20px;
+            margin: 0 auto;
+        }
+
+        #details-produit img {
+            width: 50%;
             height: auto;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 50%;
+            padding: 20px;
         }
 
         #details-produit h2 {
@@ -95,7 +107,6 @@
         #details-produit p {
             font-size: 1.2rem;
             margin-bottom: 20px;
-            max-width: 700px;
         }
 
         footer {
@@ -113,6 +124,22 @@
         @media (max-width: 768px) {
             header h1 {
                 font-size: 1.8rem;
+            }
+
+            #details-produit {
+                flex-direction: column;
+                align-items: center;
+                padding: 80px 20px;
+            }
+
+            #details-produit img {
+                width: 100%;
+            }
+
+            .text {
+                width: 100%;
+                padding: 10px;
+                text-align: center;
             }
 
             #details-produit h2 {
@@ -138,11 +165,13 @@
     </header>
 
     <section id="details-produit">
-        <img src="miel.jpg" alt="Pot de miel">
-        <div>
-            <h2>Miel de Lavande</h2>
-            <p>Prix : 15,00 €</p>
-            <p>Description : Ce miel de lavande est produit à partir des fleurs de lavande de nos champs. Il a une saveur douce et florale, idéale pour sucrer vos boissons ou accompagner vos desserts.</p>
+        <div class="container">
+            <img src="miel.jpg" alt="Pot de miel">
+            <div class="text">
+                <h2>Miel de Lavande</h2>
+                <p>Prix : 15,00 €</p>
+                <p>Description : Ce miel de lavande est produit à partir des fleurs de lavande de nos champs. Il a une saveur douce et florale, idéale pour sucrer vos boissons ou accompagner vos desserts.</p>
+            </div>
         </div>
     </section>
 
