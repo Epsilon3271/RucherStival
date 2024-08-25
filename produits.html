@@ -68,7 +68,8 @@
             color: #2C6B2F;
         }
 
-        #produits {
+        main {
+            flex: 1;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -103,24 +104,25 @@
         .produit h3 {
             margin: 10px 0;
             font-size: 1.5rem;
-            color: #F5C500;
+            color: #2C6B2F;
         }
 
         .produit p {
-            margin: 0;
             font-size: 1.2rem;
+            color: #2C6B2F;
+            margin: 10px 0;
         }
 
         .produit a {
             text-decoration: none;
-            color: #2C6B2F;
+            color: #F5C500;
             font-weight: 600;
             font-size: 1rem;
             transition: color 0.3s ease;
         }
 
         .produit a:hover {
-            color: #F5C500;
+            color: #6D6E71;
         }
 
         footer {
@@ -138,10 +140,6 @@
         @media (max-width: 768px) {
             header h1 {
                 font-size: 1.8rem;
-            }
-
-            #produits {
-                padding: 80px 10px 60px 10px;
             }
 
             .produit h3 {
@@ -166,7 +164,7 @@
         </nav>
     </header>
 
-    <section id="produits">
+    <main>
         <div class="produit">
             <img src="miel.jpg" alt="Pot de miel">
             <h3>Miel de Lavande</h3>
@@ -185,7 +183,7 @@
             <p>12,00 €</p>
             <a href="details-produit.html">Détails</a>
         </div>
-    </section>
+    </main>
 
     <footer>
         <p>&copy; 2024 Rucher Apicole. Tous droits réservés.</p>
