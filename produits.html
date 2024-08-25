@@ -5,7 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rucher Apicole - Produits</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffbe0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f9c907;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #333;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        #produits {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .produit {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            width: 200px;
+            background-color: #fffbe0;
+        }
+
+        .produit img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #f9c907;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            color: #333;
+        }
+    </style>
 </head>
 
 <body>
@@ -26,8 +94,6 @@
             <p>15,00 €</p>
             <a href="details.html?produit=miel">Détails</a>
         </div>
-
-        <!-- Vous pouvez ajouter d'autres produits de la même manière -->
     </section>
 
     <footer>
