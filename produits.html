@@ -7,44 +7,55 @@
     <title>Rucher Apicole - Produits</title>
     <link rel="icon" href="logoabeille.png" type="image/png">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Raleway:wght@400;600&display=swap');
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Raleway', sans-serif;
             background-color: #FAF8F0;
             color: #333;
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         header {
             background-color: #D4AF37;
-            padding: 40px;
+            padding: 20px;
             text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: padding 0.3s ease;
         }
 
         header h1 {
             margin: 0;
             color: #333;
-            font-size: 2.5rem;
-            font-weight: 600;
+            font-size: 2.2rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        header.fixed {
+            padding: 10px 20px;
         }
 
         nav ul {
             list-style: none;
             padding: 0;
-            margin-top: 20px;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 30px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
         }
 
         nav ul li a {
             text-decoration: none;
             color: #333;
-            font-size: 1.1rem;
+            font-size: 1rem;
+            font-weight: 600;
             transition: color 0.3s ease;
         }
 
@@ -57,7 +68,7 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 40px;
-            padding: 60px 20px;
+            padding: 140px 20px 60px 20px;
         }
 
         .produit {
@@ -68,11 +79,12 @@
             width: 240px;
             background-color: #FFF;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .produit:hover {
             transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
         .produit img {
@@ -85,29 +97,24 @@
             color: #6b8e23;
             font-size: 1.5rem;
             margin-bottom: 10px;
-            font-weight: 500;
+            font-family: 'Playfair Display', serif;
         }
 
         .produit p {
-            font-size: 1.2rem;
-            color: #D4AF37;
+            font-size: 1.1rem;
             margin-bottom: 15px;
         }
 
         .produit a {
             text-decoration: none;
-            color: #333;
+            color: #D4AF37;
             font-weight: 600;
             font-size: 1rem;
-            border: 2px solid #D4AF37;
-            padding: 5px 15px;
-            border-radius: 10px;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: color 0.3s ease;
         }
 
         .produit a:hover {
-            background-color: #D4AF37;
-            color: #FFF;
+            color: #6b8e23;
         }
 
         footer {
@@ -115,8 +122,10 @@
             color: #FAF8F0;
             text-align: center;
             padding: 20px;
-            margin-top: 60px;
             font-size: 0.9rem;
+            position: relative;
+            margin-top: 60px;
+            clear: both;
         }
 
         footer p {
@@ -141,13 +150,32 @@
             <img src="miel.jpg" alt="Pot de miel">
             <h3>Miel de Lavande</h3>
             <p>15,00 €</p>
-            <a href="details.html?produit=miel">Détails</a>
+            <a href="details-produit.html">Détails</a>
+        </div>
+        <div class="produit">
+            <img src="miel2.jpg" alt="Pot de miel">
+            <h3>Miel de Sapin</h3>
+            <p>18,00 €</p>
+            <a href="details-produit.html">Détails</a>
+        </div>
+        <div class="produit">
+            <img src="miel3.jpg" alt="Pot de miel">
+            <h3>Miel d'Acacia</h3>
+            <p>12,00 €</p>
+            <a href="details-produit.html">Détails</a>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Rucher Apicole. Tous droits réservés.</p>
     </footer>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            header.classList.toggle('fixed', window.scrollY > 0);
+        });
+    </script>
 </body>
 
 </html>
